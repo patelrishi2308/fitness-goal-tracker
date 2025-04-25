@@ -1,0 +1,32 @@
+{
+  "goals": [
+    {
+      "id": "bea2",
+      "description": "Do Pushups",
+      "category": "Strength Training",
+      "repetitions": "20",
+      "achieved": true
+    },
+    {
+      "id": "de60",
+      "description": "Running",
+      "category": "Cardio",
+      "repetitions": "15 Minutes",
+      "achieved": false
+    },
+    {
+      "id": "2a36",
+      "description": "Meditation",
+      "category": "Yoga",
+      "repetitions": "10 Minutes",
+      "achieved": false
+    },
+    {
+      "id": "4afb",
+      "description": "Do Pull-ups",
+      "category": "Strength Training",
+      "repetitions": "25",
+      "achieved": true
+    }
+  ]
+}
