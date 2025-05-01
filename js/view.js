@@ -16,7 +16,17 @@ export const GoalView = {
       div.style.alignItems = "center";
 
       const desc = document.createElement("span");
-      desc.innerHTML = `${goal.description} - <b>${goal.category}</b> (${goal.repetitions})`;
+      const categoryUnits = {
+        Cardio: "Miles",
+        "Strength Training": "Repetitions",
+        Yoga: "Minutes",
+        Flexibility: "Repetitions",
+        Mobility: "Repetitions",
+      };
+
+      const unit = categoryUnits[goal.category] || "";
+      desc.innerHTML = `${goal.description} - <b>${goal.category}</b> (${goal.repetitions} ${unit})`;
+
       if (goal.achieved) desc.style.textDecoration = "line-through";
 
       div.appendChild(desc);

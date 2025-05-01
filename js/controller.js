@@ -2,6 +2,19 @@ import { GoalModel } from "./model.js";
 import { GoalView } from "./view.js";
 
 const form = document.getElementById("goal-form");
+const categorySelect = document.getElementById("category")
+const repetitionsLabel = document.getElementById("repetitions-label")
+const repetitionsInput = document.getElementById("repetitions")
+
+categorySelect.addEventListener("change", () => {
+  if (categorySelect.value === "Cardio") {
+    repetitionsLabel.textContent = "Miles";
+    repetitionsInput.placeholder = "Enter Miles";
+  } else {
+    repetitionsLabel.textContent = "Repetitions";
+    repetitionsInput.placeholder = "Enter Repetitions";
+  }
+});
 
 function loadGoals() {
   GoalModel.fetchAll().then(goals =>
